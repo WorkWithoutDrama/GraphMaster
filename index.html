@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="main">
+    <div class="container">
+      <div class="work_space">
+        <div class="actions">
+          <datalist id="actions_list">
+          </datalist>
+          <datalist id="state_list">
+          </datalist>
+          <div class="graph">
+            <div class="graph__initial">
+              <ul class="initial__list" id="ilist">
+                <li class="initial__state">
+                  <input list="state_list" class="item state">
+                </li>
+              </ul>
+
+            </div>
+            <div class="graph__action item" id="action">
+                <textarea list="action_list" id="action_name" class="space"></textarea>
+                <input type="text" id="action_value" class="space">
+                <input type="text" id="action_link" class="space">
+                <input type="text" id="action_tags" class="space">
+            </div>
+            <div class="graph__final">
+              <ul class="final__list" id="flist">
+                <li class="final__state">
+                  <input list="state_list" class="item state" id="f2">
+                </li>
+              </ul>
+            </div>
+
+          </div>
+          <header class="header">
+            <a href="#" class="logo">
+              <img src="img/Logo.svg" alt="logo" class="logo__img">
+            </a>
+            <div class="panel_project">
+              <div>
+                <label for="file-uploader" class="btn">Выбрать проект</label>
+                <input id="file-uploader" style="visibility:hidden;" type="file" accept=".txt, .json">
+              </div>
+
+
+            </div>
+            <div class="panel_graph_and_action">
+              <div class="panel_graph"></div>
+              <div class="panel_action"></div>
+            </div>
+            <div class="panel_case"></div>
+          </header>
+          <div class="bricks">
+            <div class="bricks__panel"></div>
+            <ul class="bricks__list click" id="brickslist">
+              <li class="brick item"><button class="action__creator action__button">+</button></li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="case">
+          <p>Карта проекта</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <footer class="footer">
+  </footer>
+</body>
+
+<script src="js/jsonParser.js"></script>
+
+</html>
